@@ -11,7 +11,7 @@ public class simpleClient{
 	  public static void main(String args[]) throws IOException, ClassNotFoundException 
 	  {
 	    //Abrir una conexión al server en el puerto 1234
-	    Socket s1 = new Socket("localhost",1234);
+	    Socket s1 = new Socket("localhost",8000);
 	    
 	   //Obtener un manejador de flujo de entrada del socket y leer la entrada
 	    InputStream s1In = s1.getInputStream();
