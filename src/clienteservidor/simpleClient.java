@@ -46,7 +46,7 @@ public class simpleClient{
 	    
 	    
 	     
-	    while(resp.equals("SI")) 
+	    while(!(resp.equals("S") || resp.equals("s"))) 
 	    {
 		    String stloop = new String (dis.readUTF());
 		    System.out.println(stloop);

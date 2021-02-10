@@ -67,7 +67,7 @@ public class manejadorHilosServ implements Runnable{
  				        
  				        
  				        
- 					    dos.writeUTF("Desea crear otra matriz? SI/NO ");
+ 					    dos.writeUTF("Desea crear otra matriz? S/N ");
  					    String resp = dis.readUTF();
  					    System.out.println(resp);
  					    
