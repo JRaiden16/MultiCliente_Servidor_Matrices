@@ -22,12 +22,12 @@ public class manejadorHilosServ implements Runnable{
  	        InputStream s1In = s1.getInputStream();
  	        DataInputStream dis = new DataInputStream(s1In);
  	          
-
+ 	       dos.writeUTF("Conexión con el servidor establecida");
  		    Scanner sc = new Scanner(System.in);
  	        
  	        while(banderaOtro == true) 
  	        {
- 		        dos.writeUTF("Conexión con el servidor establecida\nIntroduzca un número entero para el tamaño de la matriz");
+ 		        dos.writeUTF("\nIntroduzca un número entero para el tamaño de la matriz");
  			    int tamanioMat = (dis.readInt());
  			    try 
  			    {
@@ -67,7 +67,7 @@ public class manejadorHilosServ implements Runnable{
  				        
  				        
  				        
- 					    dos.writeUTF("Desea crear otra matriz? S/N ");
+ 					    dos.writeUTF("Desea crear otra matriz? SI/NO ");
  					    String resp = dis.readUTF();
  					    System.out.println(resp);
  					    

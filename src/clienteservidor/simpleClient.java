@@ -21,11 +21,14 @@ public class simpleClient{
 	    DataOutputStream dos = new DataOutputStream (s1out);
 	    
 	    Scanner sc = new Scanner(System.in);
-
+	    String conexion = new String(dis.readUTF());
+	    System.out.println(conexion);
+	    
 	    String st = new String(dis.readUTF());
 	    System.out.println(st);
 	    
-        int tamanioMat = sc.nextInt();
+
+	    int tamanioMat = sc.nextInt();
         sc.nextLine();
         dos.writeInt(tamanioMat);
         
@@ -44,10 +47,11 @@ public class simpleClient{
 	    String resp = sc.nextLine();
 	    dos.writeUTF(resp);
 	    
-	    
+	    //tablero.show(false);
 	     
-	    while(!(resp.equals("S") || resp.equals("s"))) 
+	    while(resp.equals("SI")||resp.equals("si")) 
 	    {
+	    	tablero.show(false);
 		    String stloop = new String (dis.readUTF());
 		    System.out.println(stloop);
 		    

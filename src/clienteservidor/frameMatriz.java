@@ -44,14 +44,17 @@ public class frameMatriz extends javax.swing.JFrame {
 		pnlTablero = new javax.swing.JPanel();
 
 		setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-		setTitle("Matríz Colorida");
+		setTitle("Matríz de Colores");
 		setName("frameMatriz");
 		setResizable(false);
-		setSize(new java.awt.Dimension(620, 620));
+		setSize(new java.awt.Dimension(800, 800));
 
 		btgenera.setText("GENERAR");
-		btgenera.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(java.awt.event.ActionEvent evt) {
+		//btgenera.setVisible(false);
+		//btgenera.doClick();
+		btgenera.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent evt) {
 				btgeneraActionPerformed(evt);
 				RedibujarTablero();
 			}
